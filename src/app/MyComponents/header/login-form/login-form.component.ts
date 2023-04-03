@@ -1,4 +1,4 @@
-import { Component,Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginDataService } from 'src/app/MyServices/LoginData/login-data.service';
 @Component({
@@ -16,14 +16,15 @@ export class LoginFormComponent {
 
 
   userLoginFunction(email: string, password: string) {
-    console.log("before",this.loginDataService.isLoggedIn)
+    console.log("before", this.loginDataService.isLoggedIn)
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data => {
       const user = data.find(user => user.email === email && user.password === password);
       if (user) {
         localStorage.setItem('user-info', JSON.stringify(user));
-        alert('Successfully logged in');
+        // localStorage.setItem('isLoggedIn', 'true');
         this.loginDataService.isLoggedIn = true;
-        console.log("after",this.loginDataService.isLoggedIn)
+        alert('Successfully logged in');
+        console.log("after", this.loginDataService.isLoggedIn)
         window.location.href = '/';
       } else {
         alert('User not found, please sign up first');
