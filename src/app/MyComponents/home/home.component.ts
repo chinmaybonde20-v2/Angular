@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import { LoginDataService } from 'src/app/MyServices/LoginData/login-data.service';
 
 @Component({
@@ -6,12 +6,7 @@ import { LoginDataService } from 'src/app/MyServices/LoginData/login-data.servic
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  isLoggedIn = false;
+export class HomeComponent {
+  constructor(@Inject(LoginDataService) public loginDataService: LoginDataService) { }
 
-  constructor( private loginDataService: LoginDataService) { }
-
-  ngOnInit(): void {
-   
-  }
 }

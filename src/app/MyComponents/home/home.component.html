@@ -1,7 +1,11 @@
 <div>
-    <h3>Welcome to home page</h3>
-  </div>
-  
+  <h3>Welcome to home page</h3>
+</div>
+
+<div>
+  <h1 *ngIf="!loginDataService.isLoggedIn">Not Logged In</h1>
+</div>
+
+<div>
   <h1 *ngIf="loginDataService.isLoggedIn">Logged in as user</h1>
-<h1 *ngIf="!loginDataService.isLoggedIn">Not logged in</h1>
-  
+</div>
