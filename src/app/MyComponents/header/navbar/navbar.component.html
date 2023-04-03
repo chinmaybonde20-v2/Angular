@@ -11,12 +11,17 @@
             <li><a routerLink="contact">Contact</a></li>
         </ul>
     </div>
-    <!-- Login Button  -->
+    <!-- Login Button -->
     <div>
-        <div>
+        <div *ngIf=true>
             <button routerLink="login-form" class="button">Login</button>
-            <p>Hello {{userName}} ({{role}})</p>
+
+        </div>
+        <div *ngIf=true>
+            <button routerLink="/" class="button">LogOut</button>
+            <p> {{userName}}! You are {{role}}.</p>
         </div>
 
     </div>
 </header>
+
