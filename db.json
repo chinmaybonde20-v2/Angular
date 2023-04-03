@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "userName": "Chinmay",
+      "email": "chinmay@gmail.com",
+      "role": "admin",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "apartments": [
+    {
+      "apartmentName": "Omega Paradise",
+      "totalFloors": 6,
+      "totalFlats": 5,
+      "id": 1
+    },
+    {
+      "apartmentName": "goodwill",
+      "totalFloors": 6,
+      "totalFlats": 5,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="form-container">
+    <h4>Please enter your apartment details here</h4>
+
+    <!-- Form -->
+    <div class="form-body">
+        <form #addApartmentForm="ngForm">
+
+            <!-- Add apartment -->
+            <div>
+                <label for="apartmentName">Apartment Name:</label>
+                <input [(ngModel)]="apartmentName" type="text" id="apartmentName" name="apartmentName">
+            </div>
+            <div>
+                <label for="totalFloors">Total Floors:</label>
+                <input [(ngModel)]="totalFloors" type="number" id="totalFloors" name="totalFloors">
+            </div>
+            <div>
+                <label for="totalFlats">Total Flats:</label>
+                <input [(ngModel)]="totalFlats" type="number" id="totalFlats" name="totalFlats">
+            </div>
+            <div><hr>
+                <button routerLink="/apartment-table" type="submit" (click)="submitApartmentData(addApartmentForm)"
+                    class="button">Save Data</button>
+
+                <button type="reset" class="button">Reset Data</button>
+                <button routerLink="/" class="button">Close Form</button>
+            </div>
+
+        </form>
+    </div>
+</div>

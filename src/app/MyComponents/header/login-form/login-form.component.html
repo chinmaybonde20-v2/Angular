@@ -1,0 +1,35 @@
+<div class="form-container">
+  <h4>Login here</h4>
+
+  <div class="form-body">
+    <form action="">
+      <!-- Email -->
+      <div>
+        <label for="email">Email:</label>
+        <input [(ngModel)]="email" type="text" id="email" name="email">
+      </div>
+      <!-- Password -->
+      <div>
+        <label for="password">Password:</label>
+        <input [(ngModel)]="password" type="text" id="password" name="password">
+      </div>
+      <hr>
+      <!-- Buttons -->
+      <div>
+        <button (click)="userLoginFunction(email, password)" type="submit" class="button">Login</button>
+        <button type="reset" class="button">Reset</button>
+        <button routerLink="/" class="button">Close</button>
+      </div>
+      <!-- SignUp -->
+      <div>
+
+        <p style="color: blue">
+          If you don't have account, Please signup first
+        </p>
+        <a routerLink="/signup-form">SignUp</a>
+      </div>
+    </form>
+
+
+  </div>
+</div>

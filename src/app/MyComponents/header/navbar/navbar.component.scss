@@ -1,0 +1,38 @@
+.navbar {
+  background-color: #282A35;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  width: 100px;
+  border-radius: 100px;
+}
+
+.navlinks ul {
+  padding-right: 43px;
+  margin-left: 500px;
+}
+
+.navlinks li {
+  display: inline;
+}
+
+.navlinks a {
+  font-size: 20px;
+  color: rgb(163, 162, 162);
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+li {
+  margin-left: 10px;
+}
+
+.login-name {
+  color: rgb(221, 84, 34);
+}

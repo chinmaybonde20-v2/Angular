@@ -1,0 +1,19 @@
+<div class="main-body">
+    <h4>Apartments Data</h4>
+    <table class="table ">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th *ngFor="let currentColumn of columns">{{currentColumn}}</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let currentApartment of apartments">
+                <td>{{currentApartment.apartmentName}}</td>
+                <td>{{currentApartment.totalFloors}}</td>
+                <td>{{currentApartment.totalFlats}}</td>
+                <td><button routerLink="nameplates-page">view</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

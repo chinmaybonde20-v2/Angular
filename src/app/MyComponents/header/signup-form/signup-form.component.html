@@ -1,0 +1,39 @@
+<div class="form-container">
+    <h4>Signup here</h4>
+<div class="form-body">
+    <form #signReset="ngForm">
+        <!-- userName -->
+        <div>
+            <label for="userName">userName:</label>
+            <input [(ngModel)]="userName" type="text" id="userName" name="userName">
+        </div>
+        <!-- Email -->
+        <div>
+            <label for="email">Email:</label>
+            <input [(ngModel)]="email" type="text" id="email" name="email">
+        </div>
+        <!-- Role -->
+        <div>
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" [(ngModel)]="role">
+                <option disabled selected value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </div>
+        <!-- Password -->
+        <div>
+            <label for="password">Password:</label>
+            <input [(ngModel)]="password" type="password" id="password" name="password">
+        </div>
+        <!-- Confirm Password -->
+        <div>
+            <label for="cnfPassword">Confirm Password:</label>
+            <input type="password" id="cnfPassword" name="cnfPassword">
+        </div><hr>
+        <!-- Buttons -->
+        <button (click)="storeSignupDataFunc(signReset)"  type="submit" class="button">Register</button>
+        <button type="reset" class="button">Reset</button>
+    </form>
+</div>
+</div>
