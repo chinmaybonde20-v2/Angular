@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginDataService } from 'src/app/MyServices/LoginData/login-data.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -12,7 +13,7 @@ export class LoginFormComponent {
   password: string = '';
   isLoggedIn = false;
 
-  constructor(private http: HttpClient, @Inject(LoginDataService) private loginDataService: LoginDataService) { }
+  constructor(private http: HttpClient, private loginDataService: LoginDataService, private router:Router) { }
 
 
   userLoginFunction(email: string, password: string) {
@@ -25,7 +26,8 @@ export class LoginFormComponent {
         this.loginDataService.isLoggedIn = true;
         alert('Successfully logged in');
         console.log("after", this.loginDataService.isLoggedIn)
-        window.location.href = '/';
+        this.router.navigate([''])
+        // window.location.href = '/';
       } else {
         alert('User not found, please sign up first');
         window.location.href = '/login-form';

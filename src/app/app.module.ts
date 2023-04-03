@@ -39,7 +39,7 @@ import { LoginDataService } from './MyServices/LoginData/login-data.service';
     
   ],
   providers: [
-    LoginDataService
+    // LoginDataService
   ],
   bootstrap: [AppComponent]
 })

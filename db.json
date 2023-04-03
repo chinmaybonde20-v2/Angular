@@ -20,6 +20,12 @@
       "totalFloors": 6,
       "totalFlats": 5,
       "id": 2
+    },
+    {
+      "apartmentName": "goodwill",
+      "totalFloors": 4,
+      "totalFlats": 3,
+      "id": 3
     }
   ]
 }
