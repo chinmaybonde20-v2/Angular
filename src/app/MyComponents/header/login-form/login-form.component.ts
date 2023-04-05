@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginDataService } from 'src/app/MyServices/LoginData/login-data.service';
 import { Router } from '@angular/router';
@@ -27,10 +27,9 @@ export class LoginFormComponent {
         alert('Successfully logged in');
         console.log("after", this.loginDataService.isLoggedIn)
         this.router.navigate([''])
-        // window.location.href = '/';
       } else {
         alert('User not found, please sign up first');
-        window.location.href = '/login-form';
+         this.router.navigate(['/signup'])
       }
     });
   }
